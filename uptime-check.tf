@@ -1,7 +1,7 @@
 resource "google_monitoring_uptime_check_config" "my_check" {
   display_name = "${var.name}"
-  timeout = "5s"
-  period = "60s"
+  timeout = "${var.timeout}"
+  period = "${var.period}"
   http_check {
     path = "${var.healthcheck_path}"
     port = "${var.port}"

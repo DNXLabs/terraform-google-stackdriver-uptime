@@ -6,12 +6,12 @@ resource "google_monitoring_alert_policy" "alert_policy" {
     "projects/${var.project_id}/notificationChannels/${var.channel_slack_name}",
   ]
   conditions {
-    display_name = "${var.name}"
+    display_name = "Threshold:${var.threshold} - ${var.name}"
     condition_threshold {
       filter = "metric.type=\"monitoring.googleapis.com/uptime_check/check_passed\" resource.type=\"uptime_url\" metric.label.\"check_id\"=\"${basename(google_monitoring_uptime_check_config.my_check.id)}\""
-      duration = "60s"
+      duration = "${var.duration}"
       comparison = "COMPARISON_GT"
-      threshold_value = 1.0
+      threshold_value = "${var.threshold}"
       trigger {
         count = 1
       }
