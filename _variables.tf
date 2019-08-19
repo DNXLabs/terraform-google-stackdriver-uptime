@@ -1,6 +1,6 @@
 # == REQUIRED VARS
 variable "project_id" {}
-variable "channel_email_adrress" {}
+variable "channel_email_address" {}
 variable "channel_slack_name" {}
 
 variable "timeout"{

@@ -2,7 +2,7 @@ resource "google_monitoring_alert_policy" "alert_policy" {
   display_name = "${var.name}"
   combiner = "OR"
   notification_channels = [ 
-    "projects/${var.project_id}/notificationChannels/${var.channel_email_adrress}",
+    "projects/${var.project_id}/notificationChannels/${var.channel_email_address}",
     "projects/${var.project_id}/notificationChannels/${var.channel_slack_name}",
   ]
   conditions {
