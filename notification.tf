@@ -23,5 +23,9 @@ resource "google_monitoring_alert_policy" "alert_policy" {
       }
     }
   }
+
+  depends_on = [
+    google_monitoring_uptime_check_config.my_check,
+  ]
 }
 
