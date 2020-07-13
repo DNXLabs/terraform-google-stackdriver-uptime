@@ -4,6 +4,7 @@
 [![LICENSE](https://img.shields.io/github/license/DNXLabs/terraform-google-stackdriver-uptime)](https://github.com/DNXLabs/terraform-google-stackdriver-uptime/blob/master/LICENSE)
 
 <!--- BEGIN_TF_DOCS --->
+
 ## Requirements
 
 | Name | Version |
