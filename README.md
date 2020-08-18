@@ -9,7 +9,7 @@
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.20 |
+| terraform | >= 0.12.0 |
 
 ## Providers
 
